@@ -1,0 +1,64 @@
+/* Dark Theme */
+:root {
+	/* --color-primary: #202428; */
+	--color-primary: radial-gradient(
+		circle,
+		#bababe 0%,
+		#242535 45%,
+		#202428 60%,
+		black 100%
+	);
+	--color-secondary: #1b2431;
+	--color-accent: lightgrey;
+	--color-text: black;
+	--color-heading: white;
+	--color-heading-body: white;
+}
+
+body {
+	background-color: rgba(35, 48, 67, 0.9);
+}
+
+.main-window {
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.header {
+	box-shadow: 0 0 3px 3px black;
+}
+
+/* THEME toggle button */
+.btn-theme-toggle::after {
+	font-family: "Material Symbols Outlined";
+	content: "\f174";
+}
+.btn-theme-toggle:hover {
+	box-shadow: 0 0 0 1px whitesmoke;
+}
+
+/* OTHER */
+.input-container-num {
+	box-shadow: 3px 3px 0 grey;
+}
+
+/* HOVER STYLES */
+* {
+	transition: box-shadow 0.2s ease-out;
+}
+.input-container:hover {
+	/* !!!! COME BACK TO THIS!!! Just using this to test stuff for now */
+	box-shadow: 3px 3px 0 grey;
+}
+.input-container-num:hover {
+	box-shadow: 3px 3px 0 2px grey;
+}
+.big-hover:hover {
+	box-shadow: 3px 3px 0 2px grey;
+}
+.little-hover:hover {
+	box-shadow: 3px 3px 0 grey;
+}
+
+.fed-total-breakdown-container .input-container:hover {
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}

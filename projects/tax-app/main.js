@@ -16,6 +16,24 @@ let remainderFed90Box = document.getElementById("remainder-fed-90%-box");
 let remainderStateBox = document.getElementById("remainder-state-box");
 let remainderState90Box = document.getElementById("remainder-state-90%-box");
 
+// Select the button
+const btn = document.querySelector(".btn-theme-toggle");
+// Select the stylesheet <link>
+const theme = document.querySelector("#theme-link");
+
+// Listen for a click on the button
+btn.addEventListener("click", function () {
+	// If the current URL contains "light-theme.css"
+	if (theme.getAttribute("href") == "css/styles.css") {
+		// ... then switch it to "dark-theme.css"
+		theme.href = "css/dark-theme.css";
+		// Otherwise...
+	} else {
+		// ... switch it to "light-theme.css"
+		theme.href = "css/styles.css";
+	}
+});
+
 // input filters
 setInputFilter(incomeBox, function (value) {
 	return /^\d*\.?\d*$/.test(value); // Allow digits and '.' only, using a RegExp.

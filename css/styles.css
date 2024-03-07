@@ -1,5 +1,8 @@
 :root {
 	/* reminder Insert variables here */
+	--color-primary: white;
+	--color-secondary: #1b2431;
+	--color-accent: #ff4d5a;
 	--color-text: black;
 	--color-text-highlight: #ff4d5a;
 }
@@ -11,31 +14,101 @@ body {
 
 	display: flex;
 	flex-direction: column;
-	padding: 1rem;
 }
 
 /* TYPOGRAPHY */
 
 /* HOME BLOCK */
-.home {
-	border: solid 2px black;
+.home-block {
+	border: solid 10px var(--color-secondary);
+	box-sizing: border-box;
+
 	text-align: center;
 	font-size: 48px;
 
-	height: 95vh;
+	height: 100vh;
+	/* margin: 5px; */
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
-.home span {
+.home-block span {
 	color: var(--color-text-highlight);
 }
 
-/* SKILL BLOCK */
-/* test */
+/* ABOUT BLOCK */
+.about-block {
+	background-color: var(--color-secondary);
+	color: var(--color-primary);
+}
+
+/* about section */
+.about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px;
+}
+.about img {
+	width: 200px;
+}
+.about-text {
+	max-width: 500px;
+}
+
+/* skills section */
 .skills {
-	height: 95vh;
-	background-color: black;
+	display: flex;
+	justify-content: center;
+}
+.skill-icon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	border: solid var(--color-primary);
+	border-radius: 1rem;
+	padding: 1rem;
+	margin: 10px;
+
+	width: 80px;
+	/* min-width: 80px; */
+}
+.skill-icon img {
+	height: 50px;
+}
+
+/* PROJECTS BLOCK */
+.projects-block {
+	border: solid 10px var(--color-secondary);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.project {
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	background-color: var(--color-secondary);
+	padding: 15px;
+	border-radius: 10px;
+}
+.project a {
+	color: var(--color-primary);
+	text-decoration: none;
+}
+
+/* CONTACT BLOCK */
+.contact-block {
+	height: 100vh;
+	background-color: var(--color-secondary);
 	color: var(--color-text-highlight);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
