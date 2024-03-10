@@ -1,5 +1,5 @@
+/* reminder: MOBILE FIRST APPROACH! -> other sizes after! */
 :root {
-	/* reminder Insert variables here */
 	--color-primary: white;
 	--color-secondary: #1b2431;
 	--color-accent: #ff4d5a;
@@ -16,9 +16,9 @@ body {
 	flex-direction: column;
 }
 
-/* TYPOGRAPHY */
+/* --- TYPOGRAPHY --- */
 
-/* HOME BLOCK */
+/* --- HOME BLOCK --- */
 .home-block {
 	border: solid 10px var(--color-secondary);
 	box-sizing: border-box;
@@ -37,7 +37,7 @@ body {
 	color: var(--color-text-highlight);
 }
 
-/* ABOUT BLOCK */
+/* --- ABOUT BLOCK --- */
 .about-block {
 	background-color: var(--color-secondary);
 	color: var(--color-primary);
@@ -60,6 +60,7 @@ body {
 /* skills section */
 .skills {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 }
 .skill-icon {
@@ -73,22 +74,22 @@ body {
 	margin: 10px;
 
 	width: 80px;
-	/* min-width: 80px; */
 }
 .skill-icon img {
 	height: 50px;
 }
 
-/* PROJECTS BLOCK */
+/* --- PROJECTS BLOCK --- */
 .projects-block {
 	border: solid 10px var(--color-secondary);
-	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 50px;
 }
 .project {
-	width: 400px;
+	width: 90%;
+	max-width: 500px;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
