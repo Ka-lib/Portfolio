@@ -32,6 +32,10 @@ html {
 	/* font-size: 62.5%; */
 }
 
+a {
+	text-decoration: none;
+}
+
 .block-heading {
 	border-bottom: solid 1px;
 }
@@ -102,6 +106,8 @@ html {
 	flex-direction: column;
 	align-items: center;
 
+	text-align: center;
+
 	border: solid var(--color-primary);
 	border-radius: 15px;
 	padding: 15px 0;
@@ -164,25 +170,50 @@ html {
 	align-items: center;
 	padding: 50px;
 }
+
 .project {
-	width: 90%;
-	max-width: 500px;
+	/* border: solid yellow; */
 	display: flex;
 	flex-direction: column;
-	text-align: center;
-
-	background-color: var(--color-secondary);
-	padding: 15px;
-	border-radius: 10px;
-
-	color: var(--color-primary);
-	text-decoration: none;
-
-	box-shadow: rgba(0, 0, 0, 0.7) 0 0 10px 5px;
+	align-items: center;
+	gap: 30px;
 }
-.project:hover {
-	transform: scale(0.97);
-	box-shadow: none;
+.project-info {
+	/* border: green solid; */
+}
+
+.project-img-link {
+	/* border: solid var(--color-secondary) 1px; */
+	display: flex;
+	flex-direction: column;
+
+	max-width: 300px;
+	min-width: 200px;
+
+	overflow: hidden;
+	border-radius: 15px;
+
+	box-shadow: rgba(0, 0, 0, 0.3) 0 20px 15px;
+}
+.project-img {
+	width: 100%;
+}
+.project-img {
+	transform: scale(1.02);
+}
+.project-img-link:hover {
+	transform: scale(0.99);
+	box-shadow: rgba(0, 0, 0, 0.3) 0 3px 3px;
+}
+
+.project-view-button {
+}
+
+@media screen and (min-width: 724px) {
+	.project {
+		flex-direction: row;
+		align-items: unset;
+	}
 }
 
 /* CONTACT BLOCK */
@@ -198,4 +229,26 @@ html {
 }
 
 .email-link {
+	color: var(--color-secondary);
+	background-color: var(--color-accent);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 50px;
+	height: 50px;
+
+	border-radius: 100px;
+
+	font-size: xx-large;
+
+	box-shadow: rgba(0, 0, 0, 0.7) 0 0 5px 5px;
+}
+.email-link::after {
+	font-family: "Material Symbols Outlined";
+	content: "\f187";
+}
+.email-link:hover {
+	transform: scale(0.95);
+	box-shadow: none;
 }

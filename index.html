@@ -8,6 +8,11 @@
 		<!-- Style sheets -->
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/styles.css" />
+
+		<!-- google font icon -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	</head>
 	<body>
 		<!-- HOME BLOCK -->
@@ -24,7 +29,8 @@
 			<!-- <img class="about-img" src="imgs/face-placeholder.png" alt="" /> -->
 			<div class="about-text">
 				<p>
-					A Developer motivated by constant improvment and learning.
+					A Developer primarily motivated by constant improvement and
+					learning.
 				</p>
 			</div>
 		</div>
@@ -67,11 +73,11 @@
 						<p>npm</p>
 					</div>
 
-					<!-- <div class="skill skill-coming-soon">
+					<div class="skill skill-coming-soon">
 						<img
 							src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg" />
 						<p>TypeScript</p>
-					</div> -->
+					</div>
 				</div>
 			</div>
 
@@ -98,8 +104,18 @@
 					</div>
 
 					<div class="skill">
-						<img src="imgs/cython.svg" alt="" />
+						<img src="imgs/icons/cython.svg" alt="" />
 						<p>Cython</p>
+					</div>
+
+					<div class="skill">
+						<img src="imgs/icons/pyinstaller.svg" alt="" />
+						<p>Pyinstaller</p>
+					</div>
+
+					<div class="skill">
+						<img src="imgs/icons/vtk.svg" alt="" />
+						<p>VTK</p>
 					</div>
 
 					<div class="skill">
@@ -112,6 +128,10 @@
 						<img
 							src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-original.svg" />
 						<p>pytest</p>
+					</div>
+
+					<div class="skill">
+						<p>And many other libraries & tools</p>
 					</div>
 				</div>
 			</div>
@@ -151,11 +171,47 @@
 		<div class="projects-block">
 			<h1 class="block-heading">Projects</h1>
 
-			<a class="project" href="projects/tax-app/index.html" target="">
-				<h2>Tax App</h2>
-				<img src="imgs/tax-app-img-removebg-preview.png" alt="" />
-				Click Me
-			</a>
+			<div class="project">
+				<div class="project-info">
+					<h2>Personal Tax App</h2>
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing
+						elit. Eius omnis in porro quisquam explicabo facilis
+						numquam repudiandae, soluta minus labore.
+					</p>
+
+					<div class="project-skills">skills used</div>
+
+					<a href="projects/tax-app/index.html">
+						<div class="project-view-button">View App</div>
+					</a>
+				</div>
+
+				<a class="project-img-link" href="projects/tax-app/index.html">
+					<img
+						class="project-img"
+						src="imgs/tax-app-img.png"
+						alt="" />
+				</a>
+			</div>
+
+			<!-- OLD STUFF -->
+			<!-- <div class="project-container">
+				<a class="project" href="projects/tax-app/index.html" target="">
+					<img src="imgs/tax-app-img.png" alt="" />
+				</a>
+				<h2>Personal Tax App</h2>
+
+				Live Demo
+			</div>
+
+			<div class="project-container">
+				<a class="project" href="">
+					<img src="imgs/tax-app-img-removebg-preview.png" alt="" />
+				</a>
+				<h2>Test</h2>
+				Test
+			</div> -->
 		</div>
 
 		<!-- CONTACT BLOCK -->
@@ -164,9 +220,9 @@
 
 			<p>Interested? Click the link below to email me.</p>
 
-			<a class="email-link" href="mailto:iverns.random.things@gmail.com"
-				>Test email link!</a
-			>
+			<a href="mailto:iverns.random.things@gmail.com">
+				<div class="email-link"></div>
+			</a>
 		</div>
 
 		<!-- Java Script -->
