@@ -279,6 +279,7 @@ a {
 	background-color: var(--color-secondary);
 	color: var(--color-accent);
 	padding: 7px 20px;
+	margin-bottom: 20px;
 	font-weight: bold;
 
 	box-shadow: var(--high-shadow);
@@ -326,6 +327,7 @@ a {
 		width: unset;
 		max-width: 400px;
 		min-width: 300px;
+		margin-left: 100px;
 	}
 
 	.project-coming-soon::after {
@@ -335,6 +337,10 @@ a {
 
 		right: calc(50% + 125px);
 		top: 50px;
+	}
+
+	.project-view-button {
+		margin-bottom: unset;
 	}
 }
 
