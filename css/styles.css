@@ -4,12 +4,14 @@
 	--color-secondary: #1b2431;
 	--color-accent: #ff4d5a;
 	--color-text: black;
-	--color-text-highlight: #ff4d5a;
 
 	--high-shadow-colorless: 0 20px 15px;
 	--low-shadow-colorless: 0 3px 3px;
-	--high-shadow: rgba(0, 0, 0, 0.3) var(--high-shadow-colorless);
-	--low-shadow: rgba(0, 0, 0, 0.3) var(--low-shadow-colorless);
+	--high-shadow: rgba(0, 0, 0, 0.4) var(--high-shadow-colorless);
+	--low-shadow: rgba(0, 0, 0, 0.4) var(--low-shadow-colorless);
+
+	--high-shadow-dark: black var(--high-shadow-colorless);
+	--low-shadow-dark: black var(--low-shadow-colorless);
 }
 
 *,
@@ -24,12 +26,13 @@
 }
 
 body {
+	display: flex;
+	flex-direction: column;
+
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
 		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
 		sans-serif;
-
-	display: flex;
-	flex-direction: column;
+	font-size: large;
 }
 
 /* --- TYPOGRAPHY --- */
@@ -46,6 +49,11 @@ a {
 	border-bottom: solid 1px;
 }
 
+h1,
+h2 {
+	text-shadow: var(--low-shadow);
+}
+
 /* --- HOME BLOCK --- */
 @keyframes custom-movie-start {
 	0% {
@@ -57,10 +65,10 @@ a {
 }
 .home-block {
 	border: solid var(--color-secondary);
-	box-sizing: border-box;
 
 	text-align: center;
 	font-size: 48px;
+	text-shadow: var(--low-shadow);
 
 	height: 100vh;
 
@@ -92,6 +100,7 @@ a {
 	animation-fill-mode: forwards;
 }
 .my-name {
+	color: var(--color-accent);
 	display: inline-block;
 	padding-left: 0.7rem;
 
@@ -107,10 +116,6 @@ a {
 	animation-fill-mode: forwards;
 }
 
-.home-block span {
-	color: var(--color-text-highlight);
-}
-
 /* --- ABOUT BLOCK --- */
 .about-block {
 	background-color: var(--color-secondary);
@@ -120,6 +125,9 @@ a {
 	flex-direction: column;
 	padding: 40px;
 	align-items: center;
+}
+.about-block .block-heading {
+	text-shadow: var(--low-shadow-dark);
 }
 .about-img {
 	width: 200px;
@@ -137,6 +145,9 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+.skills-block .block-heading {
+	text-shadow: var(--low-shadow-dark);
 }
 .skills-group-heading {
 	margin: 0;
@@ -167,9 +178,12 @@ a {
 
 	width: 80px;
 	height: 84.75px;
+
+	box-shadow: black var(--low-shadow-colorless);
 }
 .skill img {
 	height: 35px;
+	padding: 5px;
 }
 .skill p {
 	margin: 0;
@@ -177,9 +191,12 @@ a {
 }
 .skill:hover {
 	transform: scale(1.15);
-	box-shadow: var(--color-accent) 0 0 10px 2px;
+	box-shadow: black var(--high-shadow-colorless);
 }
 
+.skill-coming-soon {
+	border-color: grey;
+}
 .skill-coming-soon * {
 	filter: grayscale(1);
 	opacity: 0.3;
@@ -189,9 +206,10 @@ a {
 	position: relative;
 	bottom: 100%;
 	text-align: center;
-	/* color: var(--color-secondary); */
 	font-weight: 700;
 	font-size: large;
+
+	text-shadow: var(--low-shadow-dark);
 }
 
 @media screen and (min-width: 1024px) {
@@ -213,7 +231,6 @@ a {
 
 /* --- PROJECTS BLOCK --- */
 .projects-block {
-	/* border: solid 10px var(--color-secondary); */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -238,6 +255,7 @@ a {
 	font-size: 60px;
 	font-weight: 600;
 	text-align: center;
+	/* shadow actually just to make sure words are still readable on similar background */
 	text-shadow: var(--color-primary) 0 0 10px;
 	color: rgb(75, 75, 75);
 
@@ -282,6 +300,7 @@ a {
 	margin-bottom: 20px;
 	font-weight: bold;
 
+	text-shadow: black var(--low-shadow-colorless);
 	box-shadow: var(--high-shadow);
 }
 .project-view-button:hover {
@@ -348,12 +367,22 @@ a {
 .contact-block {
 	height: 100vh;
 	background-color: var(--color-secondary);
-	color: var(--color-text-highlight);
+	color: var(--color-accent);
+	text-align: center;
+
+	text-shadow: var(--low-shadow-dark);
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+.contact-block .block-heading {
+	text-shadow: var(--low-shadow-dark);
+}
+.contact-block p {
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .email-link {
@@ -370,8 +399,7 @@ a {
 
 	font-size: xx-large;
 
-	/* box-shadow: rgba(0, 0, 0, 0.7) 0 0 5px 5px; */
-	box-shadow: black var(--high-shadow-colorless);
+	box-shadow: var(--high-shadow-dark);
 }
 .email-link::after {
 	font-family: "Material Symbols Outlined";
@@ -379,5 +407,12 @@ a {
 }
 .email-link:hover {
 	transform: scale(0.95);
-	box-shadow: black var(--low-shadow-colorless);
+	box-shadow: var(--low-shadow-dark);
+}
+
+@media screen and (min-width: 724px) {
+	.contact-block {
+		height: 250px;
+		justify-content: flex-start;
+	}
 }
