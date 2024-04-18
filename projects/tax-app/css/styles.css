@@ -195,8 +195,14 @@ h3 {
 	display: flex;
 	align-items: center;
 	background-color: var(--color-accent);
-	border-radius: 100px;
+	border-radius: 30px;
 	padding-right: 1rem;
+
+	flex-direction: column;
+	text-align: center;
+}
+.fed-total-breakdown-container input {
+	text-align: center;
 }
 
 .totals-container {
@@ -214,6 +220,14 @@ h3 {
 }
 
 @media screen and (min-width: 525px) {
+	.fed-total-breakdown-container {
+		flex-direction: unset;
+		text-align: unset;
+	}
+	.fed-total-breakdown-container input {
+		text-align: unset;
+	}
+
 	.totals-container {
 		flex-direction: row;
 	}
